@@ -8,7 +8,8 @@
     <test name = "NYPost Home">
 
         <classes>
-            <class name="news.TestNewsMenu"></class>
+<!--            <class name="news.TestNewsMenu"></class>-->
+            <class name="news.TestNewsSection"></class>
         </classes>
 
     </test>

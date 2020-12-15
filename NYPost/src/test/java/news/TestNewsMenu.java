@@ -8,6 +8,6 @@ public class TestNewsMenu extends CommonAPI {
 
     @Test
     public void test1(){
-        driver.findElement(By.cssSelector("svg.menu-icon-svg")).click();
+        clickOnWebElement("svg.menu-icon-svg");
     }
 }

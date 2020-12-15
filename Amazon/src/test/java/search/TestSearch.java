@@ -5,17 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class TestSearch extends CommonAPI {
 
     @Test
     public void test1(){
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Books", Keys.ENTER);
-        driver.findElement(By.id("twotabsearchtextbox")).clear();
-    }
+        List<String> list = SearchItems.getSearchItems();
+        for(String items:list) {
+            typeOnWebElementNHitEnter("#twotabsearchtextbox", items);
+            clearInputField("#twotabsearchtextbox");
+        }
 
-    @Test
-    public void test2(){
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Honey", Keys.ENTER);
-        driver.findElement(By.id("twotabsearchtextbox")).clear();
     }
 }
