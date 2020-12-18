@@ -1,16 +1,15 @@
 package pages;
 
-import org.openqa.grid.internal.exception.NewSessionException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class MetroPage extends News {
+public class EntertainmentPage extends News{
 
     private final WebDriver driver;
-    public MetroPage(WebDriver driver){
+    public EntertainmentPage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -21,9 +20,4 @@ public class MetroPage extends News {
     public WebElement getHeadLineNewsWebElement(){
         return headLineNewsWebElement;
     }
-    public String getHeadLineNewsText(){
-        String headLine = getHeadLineNewsWebElement().getText();
-        return headLine;
-    }
-
 }
