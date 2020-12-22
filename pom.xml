@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>Amazon</module>
         <module>NYPost</module>
+        <module>W3Schools</module>
     </modules>
 
     <dependencyManagement>

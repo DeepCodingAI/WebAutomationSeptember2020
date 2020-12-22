@@ -1,5 +1,6 @@
 package features;
 
+import datafetch.FetchTheSteps;
 import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -47,6 +48,13 @@ public class AllFunctionality {
         sectionPage.goToEntertainmentPage(driver).clickOnHeadLineNews();
     }
 
+    public void runAllTheFeatureTest(WebDriver driver) throws InterruptedException,IOException {
+        FetchTheSteps fetchTheSteps = new FetchTheSteps();
+        String [] featureSteps = fetchTheSteps.getDataFromExcelFile();
+        for (int i=1; i<featureSteps.length; i++){
+            select(featureSteps[i], driver);
+        }
+    }
     public void select(String featureName, WebDriver driver)throws InterruptedException,IOException{
         switch(featureName){
             case "signUp":
@@ -62,6 +70,5 @@ public class AllFunctionality {
                 throw new InvalidArgumentException("Invalid features choice");
         }
     }
-
 
 }

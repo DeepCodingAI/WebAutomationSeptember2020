@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Amazon" />
-        <module name="NYPost" />
         <module name="Generic" />
+        <module name="NYPost" />
+        <module name="W3Schools" />
+        <module name="Amazon" />
       </profile>
     </annotationProcessing>
   </component>
