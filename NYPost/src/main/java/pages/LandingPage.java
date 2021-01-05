@@ -4,6 +4,7 @@ import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import reporting.TestLogger;
 
 public class LandingPage {
 
@@ -32,9 +33,11 @@ public class LandingPage {
         getSignUpWebElement().click();
     }
     public void clickOnSearch(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getSearchWebElement().click();
     }
     public void clickOnSectionMenu()throws InterruptedException{
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         try {
             getSectionNavBarWebElement().click();
         }catch(Exception ex){

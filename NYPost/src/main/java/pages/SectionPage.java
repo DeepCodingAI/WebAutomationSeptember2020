@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import reporting.TestLogger;
 
 public class SectionPage {
 
@@ -42,10 +43,12 @@ public class SectionPage {
         getSectionMenuWebElement().click();
     }
     public MetroPage goToMetroPage(WebDriver driver){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getMetroMenuWebElement().click();
         return new MetroPage(driver);
     }
     public BusinessPage goToBusinessPage(WebDriver driver)throws InterruptedException{
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         try {
             getBusinessMenuWebElement().click();
         }catch (Exception ex){
@@ -56,6 +59,7 @@ public class SectionPage {
         return new BusinessPage(driver);
     }
     public EntertainmentPage goToEntertainmentPage(WebDriver driver){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         getEntertainmentMenuWebElement().click();
         return new EntertainmentPage(driver);
     }
